@@ -2,6 +2,7 @@
 FastAPI バックエンドアプリケーション
 Docker学習用のサンプルAPI
 """
+import os
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
@@ -21,9 +22,12 @@ app = FastAPI(
 )
 
 # CORS設定（フロントエンドからのアクセスを許可）
+# 開発環境では複数のオリジンを許可
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next.jsのデフォルトポート
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
