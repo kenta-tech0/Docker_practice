@@ -56,7 +56,7 @@ docker-compose --version
 ### ステップ1: プロジェクトをクローン
 
 ```bash
-git clone <リポジトリURL>
+git clone https://github.com/kenta-tech0/Docker_practice.git
 cd Docker_practice
 ```
 
