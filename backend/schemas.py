@@ -9,7 +9,7 @@ from typing import Optional
 class UserBase(BaseModel):
     """ユーザーの基本情報"""
     name: str
-    email: EmailStr
+    email: str  # 一時的にstrに変更（EmailStr問題の切り分け用）
 
 
 class UserCreate(UserBase):
