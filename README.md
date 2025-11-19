@@ -56,7 +56,7 @@ Docker_practice/
 
 ```bash
 # 1. リポジトリをクローン
-git clone <リポジトリURL>
+git clone https://github.com/kenta-tech0/Docker_practice.git
 cd Docker_practice
 
 # 2. 環境変数ファイルを作成
