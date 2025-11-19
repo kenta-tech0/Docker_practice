@@ -1,6 +1,5 @@
 """
 Pydanticスキーマ（APIのリクエスト/レスポンスの型定義）
-修正版: EmailStrを使用せず、独自のバリデーションを実装
 """
 from pydantic import BaseModel, field_validator
 from datetime import datetime
