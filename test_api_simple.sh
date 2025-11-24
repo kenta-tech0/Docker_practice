@@ -63,7 +63,7 @@ echo "4. ユーザー作成 (POST /users)"
 test_email="test_$(date +%s)@example.com"
 response=$(curl -s -w "\n%{http_code}" -X POST ${API_URL}/users \
   -H "Content-Type: application/json" \
-  -d "{\"name\":\"テストユーザー\",\"email\":\"${test_email}\"}")
+  -d "{\"name\":\"Test User\",\"email\":\"${test_email}\"}")
 http_code=$(echo "$response" | tail -n1)
 body=$(echo "$response" | sed '$d')
 
