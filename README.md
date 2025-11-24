@@ -103,7 +103,7 @@ docker-compose down
 
 ```bash
 # APIテストスクリプトを実行
-./test_api.sh
+./test_api_simple.sh
 ```
 
 このスクリプトは以下をテストします：
